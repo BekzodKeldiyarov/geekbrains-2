@@ -7,7 +7,7 @@ public class Main {
         checkNumber(-12);
         System.out.println(isNegative(12));
         repeatNTime("Geekbrains Java Course", 6);
-        System.out.println(isLeap(2100));
+        System.out.println(isLeap(2000));
     }
 
     public static boolean isSumInLimit(int a, int b) {
@@ -38,16 +38,24 @@ public class Main {
         }
     }
 
+//    public static boolean isLeap(int year) {
+//        if (year % 4 == 0) {
+//            if (year % 100 == 0) {
+//                if (year % 400 == 0) {
+//                    return true;
+//                }
+//                return false;
+//            }
+//            return true;
+//        }
+//        return false;
+//    }
+
     public static boolean isLeap(int year) {
-        if (year % 4 == 0) {
-            if (year % 100 == 0) {
-                if (year % 400 == 0) {
-                    return true;
-                }
-                return false;
-            }
+        if (year % 4 == 0 && year % 100 != 0 || year % 100 == 0 && year % 400 == 0) {
             return true;
         }
+
         return false;
     }
 
